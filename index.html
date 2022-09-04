@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style type="text/css">
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  }
+  
+  body {
+  --main-color: #283526;
+  --primry-color: #888888;
+  --button-background: #4b709e;
+  --primary-button-background: #fe7649;
+  --background-color: #f0f7ff;
+  }
+  
+  h1,
+  h2 {
+  font-family: Avenir LT Std;
+  color: var(--main-color);
+  }
+  
+  h4,
+  h3 {
+  font-family: "muli";
+  color: var(--main-color);
+  }
+  
+  h3 {
+  font-weight: 750;
+  font-size: 2.2rem;
+  line-height: 6rem;
+  text-transform: capitalize;
+  }
+  
+  p,
+  a,
+  li,
+  button {
+  font-family: "muli";
+  color: var(--primry-color);
+  }
+  
+  p {
+  font-size: 1.8rem;
+  line-height: 150%;
+  font-style: normal;
+  font-weight: normal;
+  }
+  
+  a {
+  text-decoration: none;
+  cursor: pointer;
+  }
+  
+  li {
+  list-style: none;
+  }
+  
+  button {
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  line-height: 3.6rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  }
+  
+  /* -------------------------------------- our menu style 
+  --------------------------------------------------------------------------- */
+  header {
+  padding: 0 20rem;
+  }
+  
+  header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 12rem;
+  }
+  
+  header nav .left-side-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  /* background-color: #e2efff; */
+  }
+  
+  header nav .left-side-menu a img {
+  width: 8rem;
+  height: 5.5rem;
+  
+  }
+  
+  header nav .left-side-menu .sub-menu {
+  height: inherit;
+  display: flex;
+  position: relative;
+  z-index: 99;
+  }
+  
+  header nav .left-side-menu .sub-menu a {
+  margin-right: 4rem;
+  }
+  
+  header nav .left-side-menu .sub-menu a li {
+  font-size: 2rem;
+  line-height: 3.6rem;
+  text-transform: capitalize;
+  transition: all 0.2s;
+  }
+  
+  header nav .left-side-menu .sub-menu a li:hover {
+  color: var(--button-background);
+  }
+  
+  /* right side menu css style  */
+  
+  header .right-side-menu {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  }
+  
+  header .right-side-menu .sub-menu {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  }
+  
+  header .right-side-menu .sub-menu a {
+  margin-right: 8rem;
+  padding: 0.7rem 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 9;
+  }
+  
+  header .right-side-menu .sub-menu button {
+  padding: 0.5rem 2.5rem;
+  background-color: var(--button-background);
+  color: #fff;
+  position: relative;
+  z-index: 9;
+  }
+  
+  header .right-side-menu .sub-menu button:hover {
+  background: #1b3d68;
+  }
+  
+  header .right-side-menu .sub-menu a li:hover {
+  color: var(--button-background);
+  }
+  
+  /* -------------------------------------- our hero css style 
+  --------------------------------------------------------------------------- */
+  .main-hero-section {
+  padding: 0 20rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rem;
+  }
+  
+  .main-hero-section .hero-left-side {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  }
+  
+  .main-hero-section h1 {
+  width: 55rem;
+  font-size: 7.5rem;
+  line-height: 9rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  }
+  
+  .main-hero-section p {
+  margin-bottom: 8rem;
+  width: 45rem;
+  }
+  
+  .main-hero-section a img {
+  width: 13.5rem;
+  height: 4rem;
+  }
+  
+  .main-hero-section .button-group .appStore {
+  height: 4.3rem;
+  margin-bottom: -0.4rem;
+  }
+  
+  .main-hero-section .button-group a:first-child {
+  margin-right: 2.5rem;
+  }
+  
+  /* ------------------- our hero right side css style 
+  ------------------------------------ */
+  .main-hero-section .hero-right-side {
+  width: 50%;
+  height: 100vh;
+  background: var(--background-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 90px 20px 0px 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .main-hero-section .hero-right-side img {
+  width: 100rem;
+  height: 90rem;
+  margin-right: 43rem;
+  }
+  
+  /* ------------------- our 2nd section left side css style 
+  ------------------------------------ */
+  
+  .common-section {
+  width: 100%;
+  height: 70rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 9rem;
+  padding: 0 20rem;
+  }
+  
+  .common-section .left-side {
+  width: inherit;
+  height: inherit;
+  }
+  
+  .common-section .left-side figure {
+  width: 20rem;
+  height: 65rem;
+  background: #f3f9ff;
+  border-radius: 20px;
+  }
+  
+  .common-section .left-side img {
+  width: 45rem;
+  height: 60rem;
+  border-radius: 2rem;
+  margin-left: 10rem;
+  margin-top: 2.5rem;
+  }
+  
+  /* ------------------- our 2nd section right side css style 
+  ------------------------------------ */
+  
+  .common-section .right-side {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  }
+  
+  .common-section .right-side h2 {
+  width: 40rem;
+  font-style: normal;
+  font-size: 5.5rem;
+  font-weight: bold;
+  line-height: 6.3rem;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+  }
+  
+  .common-section .right-side p {
+  width: 40.3rem;
+  height: 9rem;
+  text-transform: lowercase;
+  margin-bottom: 3rem;
+  }
+  
+  .common-section .right-side .common-button {
+  padding: 1rem 3rem;
+  background-color: var(--primary-button-background);
+  margin-right: 2rem;
+  color: #fff;
+  }
+  
+  .common-section .right-side button:last-child {
+  color: var(--main-color);
+  background-color: transparent;
+  }
+  
+  .common-section .right-side .common-button:hover {
+  background: #cc491d;
+  }
+  
+  .common-section .right-side .common-button-normal:hover {
+  background: var(--primary-button-background);
+  color: #f0f7ff;
+  }
+  
+  /* ------------------- our 3rd section  css style 
+  ------------------------------------ */
+  
+  .section-third {
+  width: 100%;
+  height: 70rem;
+  background: var(--background-color);
+  padding: 3rem 20rem;
+  }
+  
+  .section-third h2 {
+  font-size: 5.5rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  text-align: center;
+  }
+  
+  .section-third p {
+  width: 40rem;
+  height: 9rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  margin: auto;
+  }
+  
+  .section-third .section-third-task {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 4rem;
+  }
+  
+  .section-third .section-third-task .task-1,
+  .section-third .section-third-task .task-2,
+  .section-third .section-third-task .task-3 {
+  padding-top: 2rem;
+  /* background: cornsilk; */
+  text-align: center;
+  transition: all 0.3s linear;
+  border-radius: 2rem;
+  }
+  
+  .section-third .section-third-task .task-1 h3,
+  .section-third .section-third-task .task-2 h3,
+  .section-third .section-third-task .task-3 h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  }
+  
+  .section-third .section-third-task .task-1 img,
+  .section-third .section-third-task .task-2 img,
+  .section-third .section-third-task .task-3 img {
+  width: 15rem;
+  height: 15rem;
+  transition: all 0.3s;
+  }
+  
+  .section-third .section-third-task .task-1 img,
+  .section-third .section-third-task .task-2 img {
+  height: 16rem;
+  }
+  
+  .section-third .section-third-task .task-3 {
+  background: #fff;
+  box-shadow: 0rem 0.4rem 2rem rgba(35, 52, 53, 0.25);
+  }
+  
+  .section-third .section-third-task .task-1:hover,
+  .section-third .section-third-task .task-2:hover {
+  background: #fff;
+  box-shadow: 0rem 0.4rem 2rem rgba(35, 52, 53, 0.25);
+  }
+  
+  .section-third .section-third-task .task-1:hover > img,
+  .section-third .section-third-task .task-2:hover > img,
+  .section-third .section-third-task .task-3:hover > img {
+  transform: rotate(360deg);
+  }
+  
+  /* ------------------- our 4th section  css style 
+  ------------------------------------ */
+  
+  #section-four .right-side h2 {
+  width: 50rem;
+  }
+  
+  #section-four .left-side img {
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  }
+  
+  /* ------------------- our 5th section  css style 
+  ------------------------------------ */
+  
+  #section-five .left-side img {
+  margin: 0;
+  }
+  
+  #section-five .right-side {
+  justify-content: flex-start;
+  padding-top: 5rem;
+  }
+  
+  #section-five .right-side h2 {
+  width: 63rem;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 6.3rem;
+  }
+  
+  #section-five .right-side h3 {
+  text-transform: none;
+  }
+  
+  #section-five .right-side p {
+  height: 3rem;
+  }
+  
+  #section-five .right-side div {
+  margin-bottom: 5rem;
+  }
+  
+  .fa-heart {
+  color: #f75d5d;
+  }
+  
+  /* ------------------- our 6th section Footer css style 
+  ------------------------------------ */
+  
+  footer {
+  width: 100%;
+  background: var(--background-color);
+  height: auto;
+  padding: 5rem 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
+  
+  footer img {
+  width: 13rem;
+  height: 5.5rem;
+  }
+  
+  footer .footer-menu {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  footer div h4 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  }
+  
+  footer div a {
+  font-size: 1.7rem;
+  line-height: 150%;
+  }
+  
+  footer .footer-div-5 a {
+  font-size: 1.5rem;
+  }
+  
+  /* ------------------- our 7th section social media css style 
+  ------------------------------------ */
+  
+  .icon-bar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  }
+  
+  .icon-bar a {
+  width: 18rem;
+  background: #3b5999;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  transition: all 0.5s linear;
+  transform: translateX(-14.5rem);
+  }
+  
+  .icon-bar a:hover {
+  transform: translateX(0);
+  }
+  
+  .icon-bar a .fab {
+  padding-left: 1rem;
+  font-size: 3rem;
+  animation: letszoom 3s linear alternate-reverse infinite;
+  }
+  
+  @keyframes letszoom {
+  from {
+  transform: scale(0.6);
+  }
+  to {
+  transform: scale(0.9);
+  }
+  }
+  
+  .icon-bar .twitter {
+  background: #00aced;
+  }
+  
+  .icon-bar .instagram {
+  background: #e4405f;
+  }
+  
+  .icon-bar .youtube {
+  background: #cd201f;
+  }
+  
+  .icon-bar .linkedin {
+  background: #0077b5;
+  }
+  
+  /* ----------------------------responsive website layout start 
+  ---------------------------*/
+  
+  @media (max-width: 1620px) {
+  header,
+  .main-hero-section,
+  .common-section {
+  padding: 0 12rem;
+  }
+  
+  .main-hero-section .hero-right-side img {
+  width: 95rem;
+  height: 95rem;
+  margin-right: 30rem;
+  }
+  }
+  
+  /* laptop devices  */
+  @media (max-width: 1280px) {
+  header,
+  .main-hero-section,
+  .common-section {
+  padding: 0 10rem;
+  }
+  html {
+  font-size: 50%;
+  }
+  
+  .main-hero-section .hero-right-side img {
+  width: 80rem;
+  height: 80rem;
+  
+  margin-right: 28rem;
+  margin-top: 5rem;
+  }
+  }
+  
+  /* tablet mode css style   */
+  @media (max-width: 980px) {
+  header,
+  .main-hero-section,
+  .common-section,
+  .section-third {
+  padding: 0 8rem;
+  }
+  
+  .main-hero-section .hero-right-side {
+  width: 100%;
+  position: relative;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .main-hero-section .hero-right-side img {
+  width: 60rem;
+  height: 60rem;
+  /* margin-left: -11rem; */
+  margin-right: 0;
+  margin-top: 5rem;
+  }
+  
+  .common-section {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  }
+  
+  .common-section .left-side figure {
+  height: 55rem;
+  }
+  
+  .common-section .left-side figure img {
+  height: 50rem;
+  margin-left: 5rem;
+  width: 35rem;
+  }
+  
+  .common-section .right-side {
+  margin-top: 6rem;
+  justify-content: start;
+  height: auto;
+  }
+  
+  .common-section .right-side h2 {
+  font-size: 4.5rem;
+  width: 35rem;
+  }
+  
+  /* section 3 style  */
+  .section-third {
+  height: auto;
+  padding: 0 5rem;
+  padding-bottom: 5rem;
+  }
+  
+  .section-third h2 {
+  width: auto;
+  padding: 0 1rem;
+  font-size: 4.5rem;
+  line-height: 6rem;
+  padding-top: 5rem;
+  }
+  
+  .section-third .section-third-task {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 4rem;
+  padding: 0;
+  }
+  
+  .section-third .section-third-task .task-1 img,
+  .section-third .section-third-task .task-2 img,
+  .section-third .section-third-task .task-3 img {
+  width: 15rem;
+  height: 15rem;
+  }
+  
+  .section-third .section-third-task .task-2 {
+  margin: 2rem 0;
+  }
+  
+  /* section 4 style  */
+  
+  #section-four .right-side {
+  order: 2;
+  }
+  
+  #section-four .right-side h2 {
+  width: 40rem;
+  }
+  
+  #section-four .left-side img {
+  height: 38rem;
+  width: 38rem;
+  margin-top: 5rem;
+  }
+  
+  /* section 5 style  */
+  
+  #section-five .right-side {
+  order: 2;
+  }
+  
+  #section-five .right-side h2 {
+  width: 40rem;
+  font-size: 3.5rem;
+  line-height: 4.2rem;
+  }
+  
+  #section-five .left-side img {
+  height: 38rem;
+  width: 38rem;
+  margin-top: 5rem;
+  }
+  
+  /* section 6 style  */
+  footer {
+  width: 100%;
+  padding: 3rem 5rem;
+  display: grid;
+  grid-template-columns: none;
+  }
+  
+  footer .footer-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  footer .footer-menu h4 {
+  font-size: 1.5rem;
+  }
+  
+  /* icons bar  */
+  .icon-bar {
+  top: 35%;
+  }
+  }
+  
+  /* mobile devices */
+  @media (max-width: 770px) {
+  header,
+  .main-hero-section,
+  .common-section {
+  padding: 0 5rem;
+  }
+  
+  header nav {
+  padding-top: 1rem;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  }
+  
+  header nav .left-side-menu {
+  width: 100%;
+  display: block;
+  order: 2;
+  }
+  
+  header nav .left-side-menu img {
+  display: block;
+  width: 100%;
+  }
+  
+  header .left-side-menu .sub-menu {
+  width: 100%;
+  display: block;
+  }
+  
+  header nav .left-side-menu .sub-menu a {
+  margin-right: 2rem;
+  }
+  
+  header nav .left-side-menu .sub-menu a li {
+  font-size: 1.7rem;
+  }
+  
+  header nav .right-side-menu {
+  width: 100%;
+  order: 1;
+  }
+  
+  header nav .right-side-menu .sub-menu a {
+  width: 10rem;
+  height: 3.5rem;
+  border: 0.1rem solid var(--main-color);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  }
+  
+  header nav .right-side-menu .sub-menu a li {
+  font-size: 1.5rem;
+  margin-right: 0;
+  text-transform: uppercase;
+  }
+  
+  header nav .right-side-menu .sub-menu button {
+  width: 13rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  }
+  
+  /* hero section css style  */
+  .main-hero-section {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  }
+  
+  .main-hero-section .hero-left-side {
+  order: 2;
+  width: 100%;
+  }
+  
+  .main-hero-section .hero-left-side h1 {
+  width: 35rem;
+  font-size: 5rem;
+  line-height: 6rem;
+  margin-bottom: 2rem;
+  }
+  
+  .main-hero-section .hero-left-side p {
+  width: 35rem;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  }
+  
+  .main-hero-section .hero-right-side {
+  order: 1;
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  }
+  
+  .main-hero-section .hero-right-side img {
+  width: 35rem;
+  height: 35rem;
+  margin: 0;
+  margin-top: 4rem;
+  }
+  }
+  </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>ZeerOP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="discription" content="ZeerOP is a made in India houseing website.Here the user will be able to find the house by applying filters like are they looking for rented,pg or own appartment, Whether they want parking or not, whether it should be in locality or not, range of budget, number of bedrooms, apartment or villa and many more">
+    <meta name="keyboard" content="ZeerOP,zerrop,houseing">
+    <meta name="Founder & CEO" content="Sanjeev Kumar">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- left side menu  -->
+        <div class="left-side-menu">
+          <div class="logo">
+            <a href="#">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgH7i97IXzL9PpTarfh7nBuoi_shUt-hef5_Kis_yI_9t8kFGWhRSxXbUGYisIemW785cOdwwRjqyc39UUO9Sxpo5fH8nlVFkustOegzSy9wQIDt6c2MIF2NeTGmf9c52Cvc1KhJJVhfOaG38ANOO-wxC9yrhrSHyiy2ZqJlEOYHneN3DGm1ueO9xvW/s1600/15.png" alt="logo" />
+            </a>
+          </div>
+
+          <div class="sub-menu">
+            <a href="#">
+              <li>Home</li>
+            </a>
+            <a href="about.html">
+              <li>About Us</li>
+            </a>
+            <a href="#">
+              <li>plans</li>
+            </a>
+            <a href="contact.html">
+              <li>Contact us</li>
+            </a>
+          </div>
+        </div>
+
+        <!-- right side menu  -->
+        <div class="right-side-menu">
+          <div class="sub-menu">
+            <a href="signup.html">
+              <li>Log In</li>
+            </a>
+            <button onclick="window.location.href='signup.html';">
+              Sign up
+              </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ----------------------------- our hero section start, 
+      Plz susbsribe to Thapa Technical. It means a world to me. 
+        ---------------------------------------------------------------------- -->
+    <section class="main-hero-section">
+      <!-- left side code   -->
+      <div class="hero-left-side">
+        <h1>ZeerOP</h1>
+        <p>
+          ZeerOP will help you to find a good house in affordable prices. Here you can rent,buy or sell
+        </p>
+        <div class="button-group">
+          <a href="#">
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirRFUHtpzFx6sPdCTmThkq--JWLcqQHgLS7YnHQGIvpbvEmrbTs_2qp3RW04FQ-QAcXO1f5om1NTi1IO4bAIeE8DqgugdyosRmdjpbE4XW84ip5xtXA1U8uGYNml6guBGNOjC4uvGkeuiPKrljeIG3JqRyDL2sIO_oMMi1ysT9qrnCUstB_q0hA2ra/s1600/appstore.png"
+              alt="appstore"
+              class="appStore"
+            />
+          </a>
+          <a href="#">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrWGa6U3A5sBj0OwVEBrK6jCehCdjYo8qYkfKDN0hHFMJtByWfEz8ZHzbmwIRgx3npv1-HNAMYP3GE8eaaOn9FRSc9nBQl7V4YLDP85tvgC4za2h-ylgd6RFnMIuyIoJ-Wt1K_TTQkv5wWvj4QsCCIGjT2KPx8btlGDQSCp6hAY_dduuhJ9B0bJVl_/s1600/googlePlay.png" alt="googlePlay" />
+          </a>
+        </div>
+      </div>
+      <!-- right side code   -->
+      <div class="hero-right-side">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEif6h8SWuvp1wpCmILKCrKczhj2zGXABXa4WFl6SAIOdiAZ1HIUaYPQxur2lpjNyf1pJv9UkEBwG5JOu2LTKhhjJ91EaxUnhtTEpDpOlY0yxwj3mK1X_Y0GcXYrAP7VyAkn5aWBafCDIJqJnd7NRsjrERnEjzD2XNJk-zdZ9MXJ8wKthZd9kaZMFbPV/s1600/20220728_140135.png" alt="heropageImg" />
+      </div>
+    </section>
+    <!-- ----------------------------- our 2nd section start 
+      Plz susbsribe to Thapa Technical. It means a world to me. 
+        ---------------------------------------------------------------------- -->
+
+    <section class="common-section" id="section-two">
+      <!-- left side of section 2  -->
+      <div class="left-side">
+        <figure>
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOyGFzIvL5uR6klOg63LeMl5catQEonSV0EENFTdLyOEjkPT5-iDNLlstZOGfAtNehfIb0OZWTz6EiTHp01rU3WVETmA7IyHX4N3y81MNGcHxgwBkQIImqlNi8J6rKG4wKuEYH8C-0-tn_rmU9S5FW9uhx9In3i7nHtBsM0zRTpUDeWnC8Wy3jA7yx/s1600/1658997284046.png" alt="section2" />
+        </figure>
+      </div>
+
+      <!-- right side of section 2  -->
+      <div class="right-side">
+        <h2>Now searching home is easy</h2>
+        <p>
+          User can sign up wether He/She is buyer or seller. The application will show houses and people who are selling houses to buyer and seller will be able to see people who are interested in his property.
+
+        </p>
+        <div class="button-group">
+          <button class="common-button">get started</button>
+          <button class="common-button-normal">how its work?</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------- our 3rd section start 
+      Plz susbsribe to Thapa Technical. It means a world to me. 
+        ---------------------------------------------------------------------- -->
+    <section class="section-third" id="section-third">
+      <h2>Some key features</h2>
+      <p>
+        ZeerOP give some of the best experience to it's users here are some few but you there are many
+      </p>
+      <div class="section-third-task">
+        <div class="task-1">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWgmTOGLQbMUI9pvxEFrvwb83cKK47dikFYUiI8w2RcIiErx13MvwQUg9JijyQuBhYYcqH60iC_OMWafk2Td23aF0uYOFsNsIIorF3NuqH0xqjBYP4519xhn_aVPwseue1H98qbv0ifRynDWAu5VcjofVLJ1Nhqg2PS53XgbIR8RzOKUf1F6rZCvgV/s1600/translator-or-translation-language-illustration-say-hello-in-different-countries-and-multilingual-international-communication-cartoon-design-vector-removebg-preview.png" alt="icon1" />
+          <h3>Multilingual</h3>
+          <p>
+            ZeerOP is Multilingual which means that there are multiple language support like Hindi, English,etc
+          </p>
+        </div>
+
+        <div class="task-2">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEji6Z84q1Wn5os2WARNSSequ3REAoJeIuTHugGu45BjYZniu0xZaoxV_u2rxVcNjlLtBSMilxUvYjVwRiAWd51gyKPhlZ4j09ePwvjmFZkfn34HseUihKuxKx2aX9Jahkrd1SmtiDfkDq5VJvrg0vG0xPaVICwhY9BnOg8CsPBuCKcPEpfP1rBsr3ZA/s1600/sectionIcon2.png" alt="icon1" />
+          <h3>Reduce your time and effort</h3>
+          <p>ZeerOP will help you to find house or find buyer/seller easily as it will take location of the user and show who are the buyer/seller near your location
+          </p>
+        </div>
+
+        <div class="task-3">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_ytaNQOHNg8OLX9dwisHmpot5ch2bGUp7TqHY2BDx9osdXlLj3uQpyBKLbMMuLaW-G2PxcQhdM4c4HWqVS9L0_EXRsp5EkvRvriQf2mUDecH8M8RguC0f9P2V0a_zi-k5evU0OCwf7OvCQXaVbXtA5czWtmenfyAzo9PappxuEvuyuXTsxkibk_zJ/s1600/1659005572495.png" alt="icon1" />
+          <h3>using filters</h3>
+          <p>
+            users can user filters on the basis of what they want buy,sell or rent. It can also be used to find PG's 
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------- our 4th section start 
+      Plz susbsribe to Thapa Technical. It means a world to me 🙂. 
+        ---------------------------------------------------------------------- -->
+
+    <section class="common-section" id="section-four">
+      <!-- right side of section 2  -->
+      <div class="right-side">
+        <h2>You can Rent or Sell house here</h2>
+        <p>
+          here you can find both buyer and seller just use our application and do all these things hassel free
+        </p>
+        <div class="button-group">
+          <button class="common-button"href="#main-hero-section">get started</button>
+          <button class="common-button-normal">how its work?</button>
+        </div>
+      </div>
+
+      <!-- left side of section 2  -->
+      <div class="left-side">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilf5BpiqXq4uHsCbjeiir-h2-lMztcJmIAUxmbGYMYGA8m68bmRG7D2yPDshGHZLy-ivpiA9Xpz8IEgUG9DVJ2fO0Y-C-tPDii0iPujXdKiST--KJhi3mxJslITOcTU0AhCJi1olOY1k9y2xCiW4OGBDxd92hV2efaBbHF_Fzq5aTMV2LgTt9YVO_R/s1600/20220730_180753.jpg" alt="section2" />
+      </div>
+    </section>
+
+    <!-- ----------------------------- our 5th section start 
+      Plz susbsribe to Thapa Technical. It means a world to me ✌. 
+        ---------------------------------------------------------------------- -->
+
+    <section class="common-section" id="section-five">
+      <!-- left side of section 2  -->
+      <div class="left-side">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQR-Rs2NtlEsl1lZgkHhV2uA8cekTD3WIgLn91js4V9aetCxlrPXEosGtaTaPjRTkd4s4k4_PYEpuOBlQ9Uw8wPW72idcxqC0sLCB2u7n6oMBoG5xXd_3tT76k1LB8NzW2XipEx1THn_nDqvp0-N4ID2TLqwCH_09Ht2FjWprm-KeLwFu7h0yZDRHi/s1600/House%20and%20people.png" alt="section5" />
+      </div>
+
+      <!-- right side of section 2  -->
+      <div class="right-side">
+        <h2>We Will take care of your buying and selling Goals</h2>
+
+        <div class="fitness-goals">
+          <div class="rule1">
+            <h3>
+              <i class="fas fa-heart"></i> we will take care of your house
+              goals
+            </h3>
+            <p>
+              with filters and sorting in ZeerOP it will help you to find houses which are affordable
+            </p>
+          </div>
+
+          <div class="rule2">
+            <h3>
+              <i class="fas fa-heart"></i> see your house without visiting
+            </h3>
+            <p>
+              3d view or photos will help users to get a virtual view of whole house
+            </p>
+          </div>
+
+          <div class="rule3">
+            <h3><i class="fas fa-heart"></i>help and support</h3>
+            <p>
+              our help and support team will always be there 24/7 for premium users and for other users our team will help them
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------- our 6th section start 
+        ---------------------------------------------------------------------- -->
+
+    <footer>
+      <div class="logo-div">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgH7i97IXzL9PpTarfh7nBuoi_shUt-hef5_Kis_yI_9t8kFGWhRSxXbUGYisIemW785cOdwwRjqyc39UUO9Sxpo5fH8nlVFkustOegzSy9wQIDt6c2MIF2NeTGmf9c52Cvc1KhJJVhfOaG38ANOO-wxC9yrhrSHyiy2ZqJlEOYHneN3DGm1ueO9xvW/s1600/15.png" alt="logo" />
+        <p>@2022 ZeerOP</p>
+      </div>
+
+      <div class="footer-menu">
+        <div class="footer-div-2">
+          <h4>Products</h4>
+          <a href="#"><li>pricing</li></a>
+          <a href="#"><li>pricing</li></a>
+        </div>
+
+        <div class="footer-div-3">
+          <h4>Abouts</h4>
+          <a href="#"><li>pricing</li></a>
+          <a href="#"><li>pricing</li></a>
+        </div>
+
+        <div class="footer-div-4">
+          <h4>Blogs</h4>
+          <a href="#"><li>pricing</li></a>
+          <a href="#"><li>pricing</li></a>
+        </div>
+
+        <div class="footer-div-5">
+          <h4>Get In Touch</h4>
+          <a href="#"><li>Questions Or Feedback?</li></a>
+          <a href="#"><li>We’ll love to help you</li></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ----------------------------- our 7th section  social media start 
+        ---------------------------------------------------------------------- -->
+
+   
+      </a>
+
+     
+     
+    </div>
+  </body>
+</html>
